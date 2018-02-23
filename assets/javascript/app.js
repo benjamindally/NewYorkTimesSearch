@@ -1,5 +1,5 @@
 var APIKey = "89e3ef8298d348709f256379ebdca622";
-
+var query = "test";
 //store response in variable res
 //res.docs is array of found articles
 //res.docs[i].web_url is web url
@@ -8,3 +8,16 @@ var APIKey = "89e3ef8298d348709f256379ebdca622";
 
 // request looks like
 //https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=OURAPIKEY&q=SEARCHTERM
+
+$(document).ready(function(){
+
+	$.ajax({
+		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key" + APIKey + "=&q=" + query,
+		method: "GET"
+	}).then(function(response){
+		console.log(response);
+	})
+
+
+
+})
