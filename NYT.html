@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<title>NYT</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	
 </head>
 <body>
 	<div class="container">
@@ -14,29 +20,34 @@
 			
 			<div class="card card-outline-secondary">
                         <div class="card-header">
-                            <h3 class="mb-0">Sign Up</h3>
+                            <h3 class="mb-0">Search Parameters</h3>
                         </div>
                         <div class="card-body">
                             <form class="form" role="form" autocomplete="off">
                                 <div class="form-group">
-                                    <label for="inputName">Name</label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Full name">
+                                    <label for="inputName">Search Term</label>
+                                    <input type="text" class="form-control" id="searchTerm" placeholder="Full name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail3">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
+                                    <label for="inputEmail3">Number of Records to Retreive</label>
+                                    <select  class="form-control form-control-lg number">
+  										<option id="one">1</option>
+  										<option id="five">5</option>
+  										<option id="ten">10</option>
+										</select>
+                   
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required="">
+                                    <label for="inputPassword3">Star Year (Optional)</label>
+                                    <input type="text" class="form-control" id="startYear" placeholder="Password" required="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputVerify3">Verify</label>
-                                    <input type="password" class="form-control" id="inputVerify3" placeholder="Password (again)" required="">
+                                    <label for="inputVerify3">End Year (Optional)</label>
+                                    <input type="text" class="form-control" id="endYear" placeholder="Password (again)" required="">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-lg float-left">Register</button>
-                                    <button type="submit" class="btn btn-success btn-lg float-left">Register</button>
+                                    <button id="searchBtn" type="submit" class="btn btn-success btn-lg float-left">Search</button>
+                                    <button id="clearBtn" type="submit" class="btn btn-success btn-lg float-left">Clear Resuts</button>
                                 </div>
                             </form>
                         </div>
