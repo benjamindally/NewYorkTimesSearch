@@ -12,7 +12,35 @@ var numberOfRecords;
 //https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=OURAPIKEY&q=SEARCHTERM
 
 function update(){
-
+    console.log(numberOfRecords);
+    var imglink = "https://www.nytimes.com/"
+    for(var i = 0; i < numberOfRecords; i++){
+        //if the document isn't an article skip over it
+        if(res.docs[i].document_type !== "article"){
+            numberOfRecords++;
+            console.log(i+"success");
+        }
+        else{    
+            console.log(i+"failure");
+            console.log(res);
+            var article = $("<div>");
+            var headline = $("<h1>");
+            var image = $("<img>");
+            var snippet = $("<p>");
+            var link = $("<a>");
+            headline.html(res.docs[i].headline.main);
+            var completeLink = imglink + res.docs[i].multimedia[0].url;
+            image.attr("src", completeLink);
+            snippet.html(res.docs[i].snippet);
+            link.attr("href", res.docs[i].web_url);
+            link.html("Read more");
+            article.append(headline);
+            article.append(image);
+            article.append(snippet);
+            article.append(link);
+            $("#container").append(article);
+        }
+    }
 }
 
 $(document).ready(function(){
@@ -28,7 +56,8 @@ $(document).ready(function(){
                 method: "GET"
             }).then(function(response){
                 //do
-                res = response;
+                res = response.response;
+                console.log(res);
                 update();
             })
     })
