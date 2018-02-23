@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>NYT</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>NYT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </head>
+
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>New York Times Search</h1>
-		</div>
-		
-			
-			<div class="card card-outline-secondary">
-                        <div class="card-header">
-                            <h3 class="mb-0">Search Parameters</h3>
-                        </div>
-                        <div class="card-body">
-                            <form class="form" role="form" autocomplete="off">
-                                <div class="form-group">
-                                    <label for="inputName">Search Term</label>
-                                    <input type="text" class="form-control" id="searchTerm" required="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail3">Number of Records to Retreive</label>
-                                    <select  class="form-control form-control-lg number">
-  										<option id="one">1</option>
-  										<option id="five">5</option>
-  										<option id="ten">10</option>
-										</select>
-                   
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword3">Star Year (Optional)</label>
-                                    <input type="text" class="form-control" id="startYear"  >
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputVerify3">End Year (Optional)</label>
-                                    <input type="text" class="form-control" id="endYear">
-                                </div>
-                                <div class="form-group">
-                                    <button id="searchBtn" type="submit" class="btn btn-success btn-lg float-left">Search</button>
-                                    <button id="clearBtn" type="submit" class="btn btn-success btn-lg float-left">Clear Resuts</button>
-                                </div>
-                            </form>
-                        </div>
-                        
-                        
+    <div class="container">
+        <div class="jumbotron">
+            <h1>New York Times Search</h1>
+        </div>
+
+
+        <div class="card card-outline-secondary">
+            <div class="card-header">
+                <h3 class="mb-0">Search Parameters</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" role="form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="inputName">Search Term</label>
+                        <input type="text" class="form-control" id="searchTerm" required="">
                     </div>
-                   <div id="bodyBlock" class="card">
+                    <div class="form-group">
+                        <label for="inputEmail3">Number of Records to Retreive</label>
+                        <select class="form-control form-control-lg number">
+                            <option id="one">1</option>
+                            <option id="five">5</option>
+                            <option id="ten">10</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3">Star Year (Optional)</label>
+                        <input type="text" class="form-control" id="startYear">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputVerify3">End Year (Optional)</label>
+                        <input type="text" class="form-control" id="endYear">
+                    </div>
+                    <div class="form-group">
+                        <button id="searchBtn" type="submit" class="btn btn-success btn-lg float-left">Search</button>
+                        <button id="clearBtn" type="submit" class="btn btn-success btn-lg float-left">Clear Resuts</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+        <!-- <div id="bodyBlock" class="card">
                           <div class="card-header">
                             Top Articles
                           </div>
@@ -60,16 +63,20 @@
                               <p id=bodyText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                           </blockquote>
                           </div>
-                        </div>
-			
+                        </div> -->
+        <div id="container">
 
-		
-		
-	</div>
+        </div>
 
 
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    </div>
+
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
 </body>
+
 </html>
