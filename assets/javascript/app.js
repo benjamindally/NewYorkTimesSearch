@@ -1,6 +1,7 @@
 var APIKey = "89e3ef8298d348709f256379ebdca622";
 var query = "test";
 var res;
+var numberOfRecords;
 //store response in variable res
 //res.docs is array of found articles
 //res.docs[i].web_url is web url
@@ -19,6 +20,9 @@ $(document).ready(function(){
     $("#searchBtn").on("click", function(event){
         event.preventDefault()
         query = $("#searchTerm").val()
+        numberOfRecords = $("#record-number").val();
+        console.log(query);
+        console.log(numberOfRecords);
             $.ajax({
                 url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key="+APIKey+"&q="+query,
                 method: "GET"
