@@ -1,0 +1,13 @@
+#bodyBlock {
+	margin-top: 2rem;
+}
+#clearBtn  {
+	margin: 1rem;
+}
+#searchBtn {
+	margin: 1rem;
+}
+.form-group {
+	width: 95%;
+	margin-left: 0.5rem;
+}
